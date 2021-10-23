@@ -14,7 +14,7 @@
 
 /* Front-end */
 Route::get('/','HomeController@index');
-// hello
+
 
 
 /* Back-end */
