@@ -39,7 +39,8 @@ class CategoryProduct extends Controller
         DB::table('tbl_category_product')->where('category_id',$category_product_id)->update($data);
         return Redirect::to('all-category-products');
     }
-    public function delete_category_products(Request $request,$category_product_id){
-        
+    public function delete_category_products($category_product_id){
+        DB::table('tbl_category_product')->where('category_id',$category_product_id)->delete();
+        return Redirect::to('all-category-products');
     }
 }
