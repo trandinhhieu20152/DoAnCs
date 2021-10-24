@@ -26,6 +26,7 @@ Route::post('/admin-dashboard','AdminController@dashboard');
 // Category products
 Route::get('/all-category-products','CategoryProduct@all_category_products');
 Route::get('/add-category-products','CategoryProduct@add_category_products');
+Route::get('/delete-category-product/{category_product_id}','CategoryProduct@delete_category_products');
 
 
 Route::post('/save-category-product','CategoryProduct@save_category_products');

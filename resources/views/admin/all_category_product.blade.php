@@ -51,7 +51,8 @@
                             <td class="align-middle text-center">
                                 <a href="" class="btn btn-success edit" role="button" data-toggle="modal"
                                     data-target="#editmodal"><i class="fa fa-pencil"></i></a>
-                                <a href="" class="btn btn-danger" role="button"><i class="fas fa-trash"></i></a>
+                                <a href="{{URL::to('/delete-category-product'.$cate_pro->category_id)}}"
+                                    class="btn btn-danger" role="button"><i class="fas fa-trash"></i></a>
                             </td>
                         </tr>
                         @endforeach
@@ -122,8 +123,8 @@
 
 
 <script type="text/javascript">
-$(document).on('click','.edit', function(){
-    var _this= $(this).parent('tr');
+$(document).on('click', '.edit', function() {
+    var _this = $(this).parent('tr');
     $('#nameproduct').val(_this.find('.align-middle').text());
 });
 </script>
