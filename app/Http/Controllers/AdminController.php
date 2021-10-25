@@ -25,15 +25,22 @@ class AdminController extends Controller
     public function dashboard(Request $request){
         $admin_email= $request->admin_email;
         $admin_password=$request->admin_password;
-
-        $result=DB::table('tbl_admin')->where('admin_email',$admin_email)->where('admin_password',$admin_password)->first();
-        if($result){
-            Session::put('admin_name',$result->admin_name);
-            Session::put('admin_id',$result->admin_id);
-            return Redirect::to('/dashboard');
+        $request=DB::table('tbl_admin')->where('admin_email',$admin_email)->where('admin_password',$admin_password)->first();
+        if($admin_email==''){
+            echo'<script> alert("Hãy nhập lại email")</script>';
+            return view('admin_login');
+        }elseif($admin_password==''){
+            echo'<script> alert("Hãy nhập lại mật khẩu")</script>';
+            return view('admin_login');
         }else{
-            Session::put('message','User name or password failed. Please enter again');
-            return Redirect::to('/admin');
+            if($request){
+                Session::put('admin_name',$request->admin_name);
+                Session::put('admin_id',$request->admin_id);
+                return Redirect::to('/dashboard');
+            }else{
+                Session::put('message','User name or password failed. Please enter again');
+                return Redirect::to('/admin');
+            }
         }
     }
     public function log_out(){

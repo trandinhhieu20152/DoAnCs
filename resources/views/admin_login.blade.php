@@ -40,10 +40,10 @@
                     <!-- security -->
                     {{ csrf_field() }}
                     <div class="field">
-                        <input type="text" name="admin_email" placeholder="Email Address" required>
+                        <input type="text" name="admin_email" placeholder="Email Address">
                     </div>
                     <div class="field">
-                        <input type="password" name="admin_password" placeholder="Password" required>
+                        <input type="password" name="admin_password" placeholder="Password">
                     </div>
                     <div class="pass-link">
                         <a href="#">Forgot password?</a>

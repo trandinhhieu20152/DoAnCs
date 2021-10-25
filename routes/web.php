@@ -19,9 +19,16 @@ Route::get('/','HomeController@index');
 
 /* Back-end */
 Route::get('/admin','AdminController@index');
+
+//login
 Route::get('/dashboard','AdminController@show_dashboard');
-Route::get('/logout','AdminController@log_out');
 Route::post('/admin-dashboard','AdminController@dashboard');
+
+//sign up
+
+//exitlogout
+Route::get('/logout','AdminController@log_out');
+
 
 // Category products
 Route::get('/all-category-products','CategoryProduct@all_category_products');
