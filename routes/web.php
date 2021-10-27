@@ -19,13 +19,11 @@ Route::get('/','HomeController@index');
 
 /* Back-end */
 Route::get('/admin','AdminController@index');
-
-//login
 Route::get('/dashboard','AdminController@show_dashboard');
+//login
 Route::post('/admin-dashboard','AdminController@dashboard');
-
 //sign up
-
+Route::post('/register-dashboard','AdminController@admin_register');
 //exitlogout
 Route::get('/logout','AdminController@log_out');
 

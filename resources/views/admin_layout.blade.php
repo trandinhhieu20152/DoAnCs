@@ -179,7 +179,7 @@
                             <div class="dropdown-menu dropdown-menu-right mt-13" aria-labelledby="dropdownMenuLink">
                                 <a class="dropdown-item" href="#"><i class="fa fa-user pr-2"></i>
                                     <?php 
-                                        $name = Session::get('admin_name');
+                                        $name = Session::get('name');
                                         if($name){
                                             echo $name;
                     

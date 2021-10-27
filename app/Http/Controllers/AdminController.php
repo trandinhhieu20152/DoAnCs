@@ -4,10 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
-
+use App\User;
 use Session;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Redirect;
+use \Illuminate\Http\Response;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 session_start();
 
 
@@ -25,7 +28,7 @@ class AdminController extends Controller
     public function dashboard(Request $request){
         $admin_email= $request->admin_email;
         $admin_password=$request->admin_password;
-        $request=DB::table('tbl_admin')->where('admin_email',$admin_email)->where('admin_password',$admin_password)->first();
+        $request=DB::table('users')->where('email',$admin_email)->where('password',$admin_password)->first();
         if($admin_email==''){
             echo'<script> alert("Hãy nhập lại email")</script>';
             return view('admin_login');
@@ -34,8 +37,8 @@ class AdminController extends Controller
             return view('admin_login');
         }else{
             if($request){
-                Session::put('admin_name',$request->admin_name);
-                Session::put('admin_id',$request->admin_id);
+                Session::put('name',$request->name);
+                Session::put('id',$request->id);
                 return Redirect::to('/dashboard');
             }else{
                 Session::put('message','User name or password failed. Please enter again');
@@ -43,9 +46,29 @@ class AdminController extends Controller
             }
         }
     }
+    public function admin_register(Request $request){
+       $name= $request->input('name');
+       $email= $request->input('email');
+       $password= $request->input('password');
+       $repassword= $request->input('repassword');
+
+       if($password != $repassword){
+            echo'<script> alert("Mật khẩu không trùng khớp")</script>';
+            return view('admin_login');
+       }elseif((int)$password<8){
+            echo'<script> alert("Mật khẩu quá ngắn. Yêu cầu từ 8 chữ số trở lên")</script>';
+            return view('admin_login');
+       }else{
+            $data=array('name'=>$name,'email'=>$email,'password'=>$password);
+            DB::table('users')->insert($data);
+            echo'<script> alert("Đăng ký thành công")</script>';
+            return view('admin_login');
+       }
+    }
+
     public function log_out(){
-        Session::put('admin_name',null);
-        Session::put('admin_id',null);
+        Session::put('name',null);
+        Session::put('id',null);
         return Redirect::to('/admin');
     }
 }

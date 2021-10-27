@@ -16,6 +16,8 @@ class User extends Authenticatable
      *
      * @var array
      */
+    protected $table = 'users';
+	public $timestamps = false;
     protected $fillable = [
         'name', 'email', 'password',
     ];
@@ -26,7 +28,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password',
     ];
 
     /**
@@ -37,7 +39,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    protected function serializeDate(DateTimeInterface $date){
-        return $date->format('Y-m-d');
-    }
+    // protected function serializeDate(DateTimeInterface $date){
+    //     return $date->format('Y-m-d');
+    // }
 }
