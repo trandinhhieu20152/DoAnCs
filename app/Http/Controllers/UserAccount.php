@@ -37,7 +37,12 @@ class UserAccount extends Controller
         }
     }
     public function update_account(){
-              return view('admin.update_account');
+        return view('admin.update_account');
     }
+    // public function update_account($user_id){
+    //     $edit_account_user = DB::table('users')->where('id',$user_id)->get();
+    //     $manager_account = view('admin.update_account')->with('edit_account_user',$edit_account_user);
+    //     return view('admin_layout')->with('admin.update_account',$manager_account);
+    // }
 
 }

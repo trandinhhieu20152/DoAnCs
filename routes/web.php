@@ -39,7 +39,10 @@ Route::post('/update-category-product/{category_product_id}','CategoryProduct@up
 // User Accont
 Route::get('/user-account','UserAccount@all_user');
 Route::get('/add-account','UserAccount@add_account');
+// Route::get('/update-account','UserAccount@update_account');
+Route::get('/','UserAccount@update_account');
 Route::get('/update-account','UserAccount@update_account');
 
 Route::post('/save-account','UserAccount@save_account');
 Route::post('/save-update-account','UserAccount@save_account');
+// {user_account_id}

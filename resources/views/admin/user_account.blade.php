@@ -41,7 +41,7 @@
                     </td>
                     <td>2008/10/16</td>
                     <td>
-                        <a href="{{URL::to('/update-account/'.$user->id)}}" type="button"
+                        <a href="{{URL::to('/update-account')}}" type="button"
                             class="btn btn-success icon-round shadow">
                             <i class="fa fa-check">
                                 <input type="hidden" name="level" value="0">
@@ -66,4 +66,5 @@
     </div>
     <!--/Datatable-->
 </div>
+
 @endsection

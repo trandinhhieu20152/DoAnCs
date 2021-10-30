@@ -9,7 +9,8 @@
             <div class="form-group row">
                 <label class="control-label col-sm-2" for="input-1">Họ và Tên</label>
                 <div class="col-sm-10">
-                    <input type="text" name="admin_name" class="form-control" id="input-1" placeholder="Trần Tèo..">
+                    <input type="text" name="admin_name" class="form-control" id="input-1" value=""
+                        placeholder="Trần Tèo..">
                 </div>
             </div>
             <div class="form-group row">
