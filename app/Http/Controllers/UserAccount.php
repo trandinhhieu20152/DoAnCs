@@ -36,13 +36,14 @@ class UserAccount extends Controller
             return redirect('/user-account');
         }
     }
-    public function update_account(){
-        return view('admin.update_account');
+    public function update_account($userid){
+        $user_account = User::find($userid);
+        return view('admin.update_account',compact('user_account'));
     }
-    // public function update_account($user_id){
-    //     $edit_account_user = DB::table('users')->where('id',$user_id)->get();
-    //     $manager_account = view('admin.update_account')->with('edit_account_user',$edit_account_user);
-    //     return view('admin_layout')->with('admin.update_account',$manager_account);
+    // public function update_account(){
+    //     $edit_category_products = DB::table('tbl_category_product')->where('category_id',$category_product_id)->get();
+    //     $manager_category_product = view('admin.all_category_product')->with('edit_category_product',$edit_category_products);
+    //     return view('admin_layout')->with('admin.all_category_product',$manager_category_product);
     // }
 
 }
