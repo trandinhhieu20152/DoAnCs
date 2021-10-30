@@ -43,15 +43,12 @@
                     <td>
                         <a href="{{URL::to('/update-account/'.$user->id)}}" type="button"
                             class="btn btn-success icon-round shadow">
-                            <i class="fa fa-check">
-                                <input type="hidden" name="level" value="0">
-                            </i>
+                            <i class="fa fa-pencil-square-o"></i>
                         </a>
-                        <!-- <a href="" class="btn btn-success edit" role="button" data-toggle="modal"
-                            data-target="#editmodal"><i class="fa fa-pencil"></i></a> -->
-                        <button type="button" class="btn btn-danger icon-round shadow">
+                        <a href="{{URL::to('/delete-user/'.$user->id)}}" type="button"
+                            class="btn btn-danger icon-round shadow">
                             <i class="fa fa-trash"></i>
-                        </button>
+                        </a>
                     </td>
                 </tr>
                 @endforeach

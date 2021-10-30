@@ -40,6 +40,7 @@ Route::post('/update-category-product/{category_product_id}','CategoryProduct@up
 Route::get('/user-account','UserAccount@all_user');
 Route::get('/add-account','UserAccount@add_account');
 Route::get('/update-account/{userid}','UserAccount@update_account');
+Route::get('/delete-user/{userid}','UserAccount@delete_account');
 
 Route::post('/save-account','UserAccount@save_account');
-Route::post('/save-update-account','UserAccount@save_account');
+Route::post('/update-account','UserAccount@save_update_account');

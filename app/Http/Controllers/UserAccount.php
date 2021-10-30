@@ -37,8 +37,21 @@ class UserAccount extends Controller
         }
     }
     public function update_account($userid){
-        $user_account = User::find($userid);
-        return view('admin.update_account',compact('user_account'));
+       $data_user= User::find($userid);
+       return view('admin.update_account',['data'=>$data_user]);
+    }
+    public function save_update_account(Request $request){
+        $data= User::find($request->id);
+        $data->name=$request->name;
+        $data->email=$request->email;
+        $data->level=$request->power;
+        $data->save();
+        return redirect('/user-account');
+    }
+    public function delete_account($userid){
+        $data= User::find($userid);
+        $data->delete();
+        return redirect('/user-account');
     }
     // public function update_account(){
     //     $edit_category_products = DB::table('tbl_category_product')->where('category_id',$category_product_id)->get();
