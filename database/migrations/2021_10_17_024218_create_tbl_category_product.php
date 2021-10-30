@@ -16,8 +16,6 @@ class CreateTblCategoryProduct extends Migration
         Schema::create('tbl_category_product', function (Blueprint $table) {
             $table->Increments('category_id');
             $table->string('category_name');
-            $table->text('category_des');
-            $table->integer('category_status');
             $table->timestamps();
         });
     }

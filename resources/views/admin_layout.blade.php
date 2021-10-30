@@ -225,7 +225,7 @@
                             </li>
 
                             <li class="parent">
-                                <a href="widgets.html" class=""><i class="fa fa-user mr-3"></i>
+                                <a href="{{URL::to('/user-account')}}" class=""><i class="fa fa-user mr-3"></i>
                                     <span class="none">Người dùng </span>
                                 </a>
                             </li>

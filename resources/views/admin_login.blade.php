@@ -31,7 +31,7 @@
             <?php 
                 $message = Session::get('message');
                 if($message){
-                    echo '<script> alert("User name or password failed. Please enter again");</script>';
+                    echo '<script> alert("Tài khoản hoặc mật khẩu của bạn không nhập đúng");</script>';
                     Session::put('message',null);
                 }
             ?>
@@ -70,6 +70,7 @@
                     <div class="field">
                         <input type="password" name="repassword" placeholder="Confirm password">
                     </div>
+                    <input type="hidden" name="level" value="1">
                     <div class="field btn">
                         <div class="btn-layer"></div>
                         <input type="submit" value="Signup">

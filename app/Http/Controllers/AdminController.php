@@ -37,11 +37,16 @@ class AdminController extends Controller
             return view('admin_login');
         }else{
             if($request){
-                Session::put('name',$request->name);
-                Session::put('id',$request->id);
-                return Redirect::to('/dashboard');
+                $check=DB::table('users')->where('email',$admin_email)->where('password',$admin_password)->where('level','=',0)->first();
+                if($check){
+                    Session::put('name',$request->name);
+                    Session::put('id',$request->id);
+                    return Redirect::to('/dashboard');
+                }else{
+                    return  redirect('/home');
+                }
             }else{
-                Session::put('message','User name or password failed. Please enter again');
+                Session::put('message','Tài khoản hoặc mật khẩu của bạn không nhập đúng !!');
                 return Redirect::to('/admin');
             }
         }
@@ -51,7 +56,7 @@ class AdminController extends Controller
        $email= $request->input('email');
        $password= $request->input('password');
        $repassword= $request->input('repassword');
-
+       $level= $request->input('level');
        if($password != $repassword){
             echo'<script> alert("Mật khẩu không trùng khớp")</script>';
             return view('admin_login');
@@ -59,8 +64,12 @@ class AdminController extends Controller
             echo'<script> alert("Mật khẩu quá ngắn. Yêu cầu từ 8 chữ số trở lên")</script>';
             return view('admin_login');
        }else{
-            $data=array('name'=>$name,'email'=>$email,'password'=>$password);
-            DB::table('users')->insert($data);
+            $user= new User();
+            $user->name= $name;
+            $user->email= $email;
+            $user->password= $password;
+            $user->level= $level;
+            $user->save();
             echo'<script> alert("Đăng ký thành công")</script>';
             return view('admin_login');
        }
