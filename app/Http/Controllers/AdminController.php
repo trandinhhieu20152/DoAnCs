@@ -28,14 +28,15 @@ class AdminController extends Controller
     public function dashboard(Request $request){
         $admin_email= $request->admin_email;
         $admin_password=$request->admin_password;
-        $request=DB::table('users')->where('email',$admin_email)->where('password',$admin_password)->first();
-        if($admin_email==''){
-            echo'<script> alert("Hãy nhập lại email")</script>';
+        $regex = "/([a-z0-9_]+|[a-z0-9_]+\.[a-z0-9_]+)@(([a-z0-9]|[a-z0-9]+\.[a-z0-9]+)+\.([a-z]{2,4}))/i";
+        if($admin_email=='' && $admin_password==''){
+            echo'<script> alert("Nhập thiếu email hoặc password")</script>';
             return view('admin_login');
-        }elseif($admin_password==''){
-            echo'<script> alert("Hãy nhập lại mật khẩu")</script>';
+        }elseif(!preg_match($regex,$admin_email)){
+            echo'<script> alert("Nhập không đúng định dạng email")</script>';
             return view('admin_login');
         }else{
+            $request=DB::table('users')->where('email',$admin_email)->where('password',$admin_password)->first();
             if($request){
                 $check=DB::table('users')->where('email',$admin_email)->where('password',$admin_password)->where('level','=',0)->first();
                 if($check){
@@ -57,13 +58,26 @@ class AdminController extends Controller
        $password= $request->input('password');
        $repassword= $request->input('repassword');
        $level= $request->input('level');
-       if($password != $repassword){
+
+       $regex = "/([a-z0-9_]+|[a-z0-9_]+\.[a-z0-9_]+)@(([a-z0-9]|[a-z0-9]+\.[a-z0-9]+)+\.([a-z]{2,4}))/i";
+       $length=strlen($password);
+
+        if($name == '' && $email=='' && $password == '' && $repassword == ''){
+            echo'<script> alert("Nhập đầy đủ thông tin")</script>';
+            return view('admin_login');
+        }elseif(!preg_match($regex,$email)){
+            echo'<script> alert("Nhập đúng định dạng email")</script>';
+            return view('admin_login');
+        }elseif(User::where('email','=',$email)->count()>0){
+            echo'<script> alert("Email này đã được sử dụng")</script>';
+            return view('admin_login');
+        }elseif($password != $repassword){
             echo'<script> alert("Mật khẩu không trùng khớp")</script>';
             return view('admin_login');
-       }elseif((int)$password<8){
-            echo'<script> alert("Mật khẩu quá ngắn. Yêu cầu từ 8 chữ số trở lên")</script>';
+       }elseif($length <8){
+            echo'<script> alert("Mật khẩu nhỏ quá 8 số")</script>';
             return view('admin_login');
-       }else{
+        }else{
             $user= new User();
             $user->name= $name;
             $user->email= $email;
