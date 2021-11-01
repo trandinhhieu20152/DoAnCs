@@ -31,3 +31,33 @@ Route::get('/delete-category-product/{category_product_id}','CategoryProduct@del
 
 Route::post('/save-category-product','CategoryProduct@save_category_products');
 Route::post('/update-category-product/{category_product_id}','CategoryProduct@update_category_products');
+
+
+//product backend
+
+Route::prefix('Product')->group(function(){
+    Route::get('/', [
+        'as'=> 'Product.index',
+        'uses'=> "ProductController@index",
+    ]);
+    Route::get('/create', [
+        'as'=> 'Product.create',
+        'uses'=> "ProductController@create",
+    ]);
+    Route::post('/store', [
+        'as'=> 'Product.store',
+        'uses'=> "ProductController@store",
+    ]);
+    Route::get('/edit/{id}', [
+        'as'=> 'Product.edit',
+        'uses'=> "ProductController@edit",
+    ]);
+    Route::post('/update/{id}', [
+        'as'=> 'Product.update',
+        'uses'=> "ProductController@update",
+    ]);
+    Route::get('/delete/{id}', [
+        'as'=> 'Product.delete',
+        'uses'=> "ProductController@delete",
+    ]);
+});

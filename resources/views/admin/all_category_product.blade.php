@@ -33,7 +33,8 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($all_category_product as $key => $cate_pro)
+                       
+                        @foreach($all_category_product as $cate_pro)
                         <tr>
                             <td style="width: 10px;" class="p-0 pr-1 align-middle">
                                 <div class="form-check-box cta">
@@ -86,7 +87,6 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Tên danh mục</th>
-                                        <th>Ngày thêm</th>
                                         <th>Chức năng</th>
                                     </tr>
                                 </thead>
@@ -97,7 +97,7 @@
                                                 name="category_product_name" id="nameproduct" class="form-control"
                                                 type="text" required>
                                         </td>
-                                        <td class="text-center align-middle">{{$cate_pro->created_at}}
+                                        {{-- <td class="text-center align-middle">{{$cate_pro->created_at}} --}}
                                         </td>
                                         <td style="width: 120px;" class="text-center align-middle">
                                             <button type="submit" class="btn btn-theme mr-1">
