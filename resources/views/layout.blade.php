@@ -66,8 +66,8 @@
                     <li><a class="nav-link scrollto" href="#about">Giới Thiệu</a></li>
                     <li><a class="nav-link scrollto" href="#menu">Menu</a></li>
                     <li><a class="nav-link scrollto" href="#events">Sự Kiện</a></li>
-                    <li><a class="nav-link scrollto" href="#chefs">Barista</a></li>
                     <li><a class="nav-link scrollto" href="#gallery">Bộ Sưu Tập</a></li>
+                    <li><a class="nav-link scrollto" href="#chefs">Barista</a></li>
                     <li class="dropdown"><a href="#"><span>Tài Khoản</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
                             <li><a href="#">Người dùng</a></li>
