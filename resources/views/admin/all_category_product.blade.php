@@ -7,11 +7,12 @@
 
             <div class="row border-bottom mb-4">
                 <div class="col-sm-8 pt-2">
-                    <h6 class="mb-4 bc-header">Danh sách danh mục</h6>
+                    <h6 class="mb-4 bc-header">Danh sách danh mục
+                        <a href="{{URL::to('/add-category-products')}}" class="fa fa-plus"
+                            style="margin-left:4px;color:#00cc6a" aria-hidden="true"></a>
+                    </h6>
                 </div>
-
             </div>
-
             <div class="table-responsive product-list">
 
                 <table class="table table-bordered table-striped mt-0" id="datatable">
@@ -59,11 +60,6 @@
                         </tr>
                         @endforeach
                 </table>
-
-                <div class="text-right">
-                    <a href="{{URL::to('/add-category-products')}}" class="btn btn-outline-theme"><i
-                            class="fa fa-plus"></i> Thêm danh mục</a>
-                </div>
             </div>
         </div>
         <!--/Order Listing-->
@@ -130,3 +126,6 @@ $(document).on('click', '.edit', function() {
 });
 </script>
 @endsection
+<script>
+$('#example').DataTable();
+</script>

@@ -8,72 +8,18 @@
     <link rel="stylesheet" href="public/backend/css/style.css">
     <link rel="icon" href="public/backend/img/logohv.png" tyle="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js">
+    </script>
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="title-text">
-            <div class="title login">
-                Login Form
-            </div>
-            <div class="title signup">
-                Signup Form
-            </div>
-        </div>
-        <div class="form-container">
-            <div class="slide-controls">
-                <input type="radio" name="slide" id="login" checked>
-                <input type="radio" name="slide" id="signup">
-                <label for="login" class="slide login">Login</label>
-                <label for="signup" class="slide signup">Signup</label>
-                <div class="slider-tab"></div>
-            </div>
-            <?php 
-                $message = Session::get('message');
-                if($message){
-                    echo '<script> alert("User name or password failed. Please enter again");</script>';
-                    Session::put('message',null);
-                }
-            ?>
-            <div class="form-inner">
-                <form action="{{URL::to('/admin-dashboard')}}" class="login" method="post">
-                    <!-- security -->
-                    {{ csrf_field() }}
-                    <div class="field">
-                        <input type="text" name="admin_email" placeholder="Email Address" required>
-                    </div>
-                    <div class="field">
-                        <input type="password" name="admin_password" placeholder="Password" required>
-                    </div>
-                    <div class="pass-link">
-                        <a href="#">Forgot password?</a>
-                    </div>
-                    <div class="field btn">
-                        <div class="btn-layer"></div>
-                        <input type="submit" value="Login">
-                    </div>
-                    <div class="signup-link">
-                        Not a member? <a href="">Signup now</a>
-                    </div>
-                </form>
-                <form action="#" class="signup">
-                    <div class="field">
-                        <input type="text" placeholder="Email Address" required>
-                    </div>
-                    <div class="field">
-                        <input type="password" placeholder="Password" required>
-                    </div>
-                    <div class="field">
-                        <input type="password" placeholder="Confirm password" required>
-                    </div>
-                    <div class="field btn">
-                        <div class="btn-layer"></div>
-                        <input type="submit" value="Signup">
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+    <!-- login content -->
+    @yield('login_content');
+    <!-- end login content -->
     <script>
     const loginText = document.querySelector(".title-text .login");
     const loginForm = document.querySelector("form.login");

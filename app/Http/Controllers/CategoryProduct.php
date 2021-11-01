@@ -4,8 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
+// <<<<<<< HEAD
 use Illuminate\Support\Facades\DB;
 use Illuminate\Routing\Redirector;
+// =======
+use DB;
+use Session;
+use App\Http\Requests;
+// >>>>>>> a56d8c5a0f1ce10b939412777bcef20908eaf9e0
 use Illuminate\Support\Facades\Redirect;
 
 session_start();
