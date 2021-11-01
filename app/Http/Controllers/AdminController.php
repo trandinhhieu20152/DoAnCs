@@ -17,7 +17,7 @@ session_start();
 class AdminController extends Controller
 {
     public function index(){
-        return view('admin_login');
+        return view('login.login');
     }
     public function show_dashboard(){
         return view('admin.dashboard');
@@ -31,10 +31,10 @@ class AdminController extends Controller
         $regex = "/([a-z0-9_]+|[a-z0-9_]+\.[a-z0-9_]+)@(([a-z0-9]|[a-z0-9]+\.[a-z0-9]+)+\.([a-z]{2,4}))/i";
         if($admin_email=='' && $admin_password==''){
             echo'<script> alert("Nhập thiếu email hoặc password")</script>';
-            return view('admin_login');
+            return view('login.login');
         }elseif(!preg_match($regex,$admin_email)){
             echo'<script> alert("Nhập không đúng định dạng email")</script>';
-            return view('admin_login');
+            return view('login.login');
         }else{
             $request=DB::table('users')->where('email',$admin_email)->where('password',$admin_password)->first();
             if($request){
@@ -64,19 +64,19 @@ class AdminController extends Controller
 
         if($name == '' && $email=='' && $password == '' && $repassword == ''){
             echo'<script> alert("Nhập đầy đủ thông tin")</script>';
-            return view('admin_login');
+            return view('login.login');
         }elseif(!preg_match($regex,$email)){
             echo'<script> alert("Nhập đúng định dạng email")</script>';
-            return view('admin_login');
+            return view('login.login');
         }elseif(User::where('email','=',$email)->count()>0){
             echo'<script> alert("Email này đã được sử dụng")</script>';
-            return view('admin_login');
+            return view('login.login');
         }elseif($password != $repassword){
             echo'<script> alert("Mật khẩu không trùng khớp")</script>';
-            return view('admin_login');
+            return view('login.login');
        }elseif($length <8){
             echo'<script> alert("Mật khẩu nhỏ quá 8 số")</script>';
-            return view('admin_login');
+            return view('login.login');
         }else{
             $user= new User();
             $user->name= $name;
@@ -85,7 +85,7 @@ class AdminController extends Controller
             $user->level= $level;
             $user->save();
             echo'<script> alert("Đăng ký thành công")</script>';
-            return view('admin_login');
+            return view('login.login');
        }
     }
 

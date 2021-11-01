@@ -26,6 +26,10 @@ Route::post('/admin-dashboard','AdminController@dashboard');
 Route::post('/register-dashboard','AdminController@admin_register');
 //exitlogout
 Route::get('/logout','AdminController@log_out');
+//forgot password
+Route::get('/forgotpassword','Security\ForgotPassword@forgot');
+
+Route::post('/forgotpassword','Security\ForgotPassword@password');
 
 
 // Category products
