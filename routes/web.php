@@ -31,6 +31,15 @@ Route::get('/forgotpassword','Security\ForgotPassword@forgot');
 
 Route::post('/forgotpassword','Security\ForgotPassword@password');
 
+// User Accont
+Route::get('/user-account','UserAccount@all_user');
+Route::get('/add-account','UserAccount@add_account');
+Route::get('/update-account/{userid}','UserAccount@update_account');
+Route::get('/delete-user/{userid}','UserAccount@delete_account');
+
+Route::post('/save-account','UserAccount@save_account');
+Route::post('/update-account','UserAccount@save_update_account');
+
 
 // Category products
 Route::get('/all-category-products','CategoryProduct@all_category_products');
@@ -40,7 +49,6 @@ Route::get('/delete-category-product/{category_product_id}','CategoryProduct@del
 Route::post('/save-category-product','CategoryProduct@save_category_products');
 Route::post('/update-category-product/{category_product_id}','CategoryProduct@update_category_products');
 
-<<<<<<< HEAD
 
 //product backend
 
@@ -70,13 +78,3 @@ Route::prefix('Product')->group(function(){
         'uses'=> "ProductController@delete",
     ]);
 });
-=======
-// User Accont
-Route::get('/user-account','UserAccount@all_user');
-Route::get('/add-account','UserAccount@add_account');
-Route::get('/update-account/{userid}','UserAccount@update_account');
-Route::get('/delete-user/{userid}','UserAccount@delete_account');
-
-Route::post('/save-account','UserAccount@save_account');
-Route::post('/update-account','UserAccount@save_update_account');
->>>>>>> a56d8c5a0f1ce10b939412777bcef20908eaf9e0

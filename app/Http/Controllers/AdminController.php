@@ -3,15 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-<<<<<<< HEAD
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
-=======
-use DB;
-use App\User;
-use Session;
->>>>>>> a56d8c5a0f1ce10b939412777bcef20908eaf9e0
-use App\Http\Requests;
 use Illuminate\Support\Facades\Redirect;
 use \Illuminate\Http\Response;
 use Illuminate\Support\Facades\Validator;
