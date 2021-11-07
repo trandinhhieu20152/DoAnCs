@@ -12,25 +12,25 @@
     <!--Meta Responsive tag-->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="icon" href="{{asset('public/backend/img/logohv2.png')}}" type="image/x-icon">
+    <link rel="icon" href="{{asset('backend/img/logohv2.png')}}" type="image/x-icon">
     <!--Bootstrap CSS-->
-    <link rel="stylesheet" href="{{asset('public/backend/assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('backend/assets/css/bootstrap.min.css')}}">
     <!--Custom style.css-->
-    <link rel="stylesheet" href="{{asset('public/backend/assets/css/quicksand.css')}}">
-    <link rel="stylesheet" href="{{asset('public/backend/assets/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('backend/assets/css/quicksand.css')}}">
+    <link rel="stylesheet" href="{{asset('backend/assets/css/style.css')}}">
     <!--Font Awesome-->
-    <link rel="stylesheet" href="{{asset('public/backend/assets/css/fontawesome-all.min.css')}}">
-    <link rel="stylesheet" href="{{asset('public/backend/assets/css/fontawesome.css')}}">
+    <link rel="stylesheet" href="{{asset('backend/assets/css/fontawesome-all.min.css')}}">
+    <link rel="stylesheet" href="{{asset('backend/assets/css/fontawesome.css')}}">
     <!--Animate CSS-->
-    <link rel="stylesheet" href="{{asset('public/backend/assets/css/animate.min.css')}}">
+    <link rel="stylesheet" href="{{asset('backend/assets/css/animate.min.css')}}">
     <!--Chartist CSS-->
-    <link rel="stylesheet" href="{{asset('public/backend/assets/css/chartist.min.css')}}">
+    <link rel="stylesheet" href="{{asset('backend/assets/css/chartist.min.css')}}">
     <!--Map-->
-    <link rel="stylesheet" href="{{asset('public/backend/assets/css/jquery-jvectormap-2.0.2.css')}}">
+    <link rel="stylesheet" href="{{asset('backend/assets/css/jquery-jvectormap-2.0.2.css')}}">
     <!--Bootstrap Calendar-->
-    <link rel="stylesheet" href="{{asset('public/backend/assets/js/calendar/bootstrap_calendar.css')}}">
+    <link rel="stylesheet" href="{{asset('backend/assets/js/calendar/bootstrap_calendar.css')}}">
     <!--Nice select -->
-    <link rel="stylesheet" href="{{asset('public/backend/assets/css/nice-select.css')}}">
+    <link rel="stylesheet" href="{{asset('backend/assets/css/nice-select.css')}}">
 
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')}}"></script>
@@ -144,7 +144,7 @@
                                 <a href="#" class="dropdown-item">
                                     <div class="media">
                                         <img class="align-self-center mr-3 rounded-circle"
-                                            src="{{asset('public/backend/img/logohv2.png')}}" width="50px"
+                                            src="{{asset('backend/img/logohv2.png')}}" width="50px"
                                             height="50px">
                                         <div class="media-body">
                                             <h6 class="mt-0"><strong>Adam Abdulrahman</strong></h6>
@@ -172,7 +172,7 @@
                         <div class="mr-4">
                             <a class="" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                <img src="{{asset('public/backend/img/logohv2.png')}}" alt="Adam" class="rounded-circle"
+                                <img src="{{asset('backend/img/logohv2.png')}}" alt="Adam" class="rounded-circle"
                                     width="40px" height="40px">
                             </a>
                             <div class="dropdown-menu dropdown-menu-right mt-13" aria-labelledby="dropdownMenuLink">
@@ -207,7 +207,7 @@
                 <div class="inner-sidebar mr-3">
                     <!--Image Avatar-->
                     <div class="avatar text-center">
-                        <img src="{{asset('public/backend/img/logohv2.png')}}" alt="" class="rounded-circle" />
+                        <img src="{{asset('backend/img/logohv2.png')}}" alt="" class="rounded-circle" />
                         <p><strong>Văn Hiếu</strong></p>
                         <span class="text-primary small"><strong>Manager</strong></span>
                     </div>
@@ -269,39 +269,39 @@
     <!--Page Wrapper-->
 
     <!-- Page JavaScript Files-->
-    <script src="{{asset('public/backend/assets/js/jquery.min.js')}}"></script>
-    <script src="{{asset('public/backend/assets/js/jquery-1.12.4.min.js')}}"></script>
+    <script src="{{asset('backend/assets/js/jquery.min.js')}}"></script>
+    <script src="{{asset('backend/assets/js/jquery-1.12.4.min.js')}}"></script>
     <!--Popper JS-->
-    <script src="{{asset('public/backend/assets/js/popper.min.js')}}"></script>
+    <script src="{{asset('backend/assets/js/popper.min.js')}}"></script>
     <!--Bootstrap-->
-    <script src="{{asset('public/backend/assets/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('backend/assets/js/bootstrap.min.js')}}"></script>
     <!--Sweet alert JS-->
-    <script src="{{asset('public/backend/assets/js/sweetalert.js')}}"></script>
+    <script src="{{asset('backend/assets/js/sweetalert.js')}}"></script>
     <!--Progressbar JS-->
-    <script src="{{asset('public/backend/assets/js/progressbar.min.js')}}"></script>
+    <script src="{{asset('backend/assets/js/progressbar.min.js')}}"></script>
     <!--Flot.JS-->
-    <script src="{{asset('public/backend/assets/js/charts/jquery.flot.min.js')}}"></script>
-    <script src="{{asset('public/backend/assets/js/charts/jquery.flot.pie.min.js')}}"></script>
-    <script src="{{asset('public/backend/assets/js/charts/jquery.flot.categories.min.js')}}"></script>
-    <script src="{{asset('public/backend/assets/js/charts/jquery.flot.stack.min.js')}}"></script>
+    <script src="{{asset('backend/assets/js/charts/jquery.flot.min.js')}}"></script>
+    <script src="{{asset('backend/assets/js/charts/jquery.flot.pie.min.js')}}"></script>
+    <script src="{{asset('backend/assets/js/charts/jquery.flot.categories.min.js')}}"></script>
+    <script src="{{asset('backend/assets/js/charts/jquery.flot.stack.min.js')}}"></script>
     <!--Chart JS-->
-    <script src="{{asset('public/backend/assets/js/charts/chart.min.js')}}"></script>
+    <script src="{{asset('backend/assets/js/charts/chart.min.js')}}"></script>
     <!--Chartist JS-->
-    <script src="{{asset('public/backend/assets/js/charts/chartist.min.js')}}"></script>
-    <script src="{{asset('public/backend/assets/js/charts/chartist-data.js')}}"></script>
-    <script src="{{asset('public/backend/assets/js/charts/demo.js')}}"></script>
+    <script src="{{asset('backend/assets/js/charts/chartist.min.js')}}"></script>
+    <script src="{{asset('backend/assets/js/charts/chartist-data.js')}}"></script>
+    <script src="{{asset('backend/assets/js/charts/demo.js')}}"></script>
     <!--Maps-->
-    <script src="{{asset('public/backend/assets/js/maps/jquery-jvectormap-2.0.2.min.js')}}"></script>
-    <script src="{{asset('public/backend/assets/js/maps/jquery-jvectormap-world-mill-en.js')}}"></script>
-    <script src="{{asset('public/backend/assets/js/maps/jvector-maps.js')}}"></script>
+    <script src="{{asset('backend/assets/js/maps/jquery-jvectormap-2.0.2.min.js')}}"></script>
+    <script src="{{asset('backend/assets/js/maps/jquery-jvectormap-world-mill-en.js')}}"></script>
+    <script src="{{asset('backend/assets/js/maps/jvector-maps.js')}}"></script>
     <!--Bootstrap Calendar JS-->
-    <script src="{{asset('public/backend/assets/js/calendar/bootstrap_calendar.js')}}"></script>
-    <script src="{{asset('public/backend/assets/js/calendar/demo.js')}}"></script>
+    <script src="{{asset('backend/assets/js/calendar/bootstrap_calendar.js')}}"></script>
+    <script src="{{asset('backend/assets/js/calendar/demo.js')}}"></script>
     <!--Nice select-->
-    <script src="{{asset('public/backend/assets/js/jquery.nice-select.min.js')}}"></script>
+    <script src="{{asset('backend/assets/js/jquery.nice-select.min.js')}}"></script>
 
     <!--Custom Js Script-->
-    <script src="{{asset('public/backend/assets/js/custom.js')}}"></script>
+    <script src="{{asset('backend/assets/js/custom.js')}}"></script>
     >>>>>>> a56d8c5a0f1ce10b939412777bcef20908eaf9e0
     <!--Custom Js Script-->
     <script>

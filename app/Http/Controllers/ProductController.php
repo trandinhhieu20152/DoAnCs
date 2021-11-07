@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
@@ -12,15 +13,17 @@ use Illuminate\Support\Facades\Redirect;
 class ProductController extends Controller
 {
     private $product;
-    public function __construct(Product $product)
+    private $category;
+    public function __construct(Product $product, Category $category)
     {
         $this->product= $product;
+        $this->category= $category;
     }
    
     public function index()
     {
-        $result= DB::table('products')
-        ->join('tbl_category_product', 'tbl_category_product.category_id', '=', 'products.category_id')->get();
+        $result= $this->product
+        ->join('categories', 'categories.id', '=', 'products.category_id')->get();
         return view('admin.all_product')->with('all_product', $result);
     }
 
@@ -31,7 +34,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $result= DB::table('tbl_category_product')->get();
+        $result= $this->category->get();
         return view('admin.add_product')->with("all_category", $result);
     }
 
@@ -51,21 +54,22 @@ class ProductController extends Controller
             $new_image= $name_image.rand(0,99).'.'.$get_image->getClientOriginalExtension();
             $get_image->move('uploads/products',$new_image);
             $data['product_image']= $new_image;
-            DB::table('products')->insert($data);
+            $this->product->insert($data);
             Session::put('message','Success');
             return redirect()->route('Product.index');
 
         }
         $data['product_image']= '';
-        DB::table('products')->insert($data);
+        $this->product->insert($data);
+
         Session::put('message','Success');
 
         return redirect()->route('Product.index');
 
     }
     public function edit($id){
-        $product= DB::table('products')->where('product_id',$id)->get();
-        $all_category= DB::table('tbl_category_product')->get();
+        $product= $this->product->where('product_id',$id)->get();
+        $all_category= $this->category->get();
         // dd($product);
         return view('admin.edit_product')->with('products', $product)->with('all_category', $all_category);
     }
@@ -85,13 +89,12 @@ class ProductController extends Controller
             $new_image= $name_image.rand(0,99).'.'.$get_image->getClientOriginalExtension();
             $get_image->move('uploads/products',$new_image);
             $data['product_image']= $new_image;
-            DB::table('products')->where('product_id', $id)->update($data);
+            $this->product->where('product_id', $id)->update($data);
             Session::put('message','Success');
             return redirect()->route('Product.index');
 
         }
-        DB::table('products')->where('product_id', $id)->update($data);
-
+        $this->product->where('product_id', $id)->update($data);
         Session::put('message','Success');
 
         return redirect()->route('Product.index');

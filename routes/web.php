@@ -78,3 +78,7 @@ Route::prefix('Product')->group(function(){
         'uses'=> "ProductController@delete",
     ]);
 });
+
+
+// giao dien nguoi dung
+Route::get('/Menu', 'HomeController@menu');
