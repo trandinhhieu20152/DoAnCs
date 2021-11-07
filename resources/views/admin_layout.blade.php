@@ -228,6 +228,11 @@
                                     <span class="none">Người dùng </span>
                                 </a>
                             </li>
+                            <li class="parent">
+                                <a href="{{URL::to('/admin-table')}}" class=""><i class="fa fa-table mr-3"></i>
+                                    <span class="none"> Đơn đặt bàn </span>
+                                </a>
+                            </li>
 
 
                             <li class="parent">
@@ -246,7 +251,7 @@
                                 </ul>
                             </li>
                             <li class="parent">
-                                <a href="fullcalendar.html" class=""><i class="fa fa-comment-o mr-3"> </i>
+                                <a href="{{url('/admin-contact')}}" class=""><i class="fa fa-comment-o mr-3"> </i>
                                     <span class="none">Phản hồi từ khách hàng </span>
                                 </a>
                             </li>

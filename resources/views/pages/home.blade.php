@@ -7,12 +7,11 @@
             <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
                 <div class="col-md-8 col-sm-12 text-center ftco-animate">
-                    <span class="subheading">Welcome</span>
-                    <h1 class="mb-4">The Best Coffee Testing Experience</h1>
-                    <p class="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the
-                        necessary regelialia.</p>
-                    <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="#"
-                            class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
+                    <span class="subheading">Chào mừng</span>
+                    <h1 class="mb-4">Những trải nghiệm về hương vị cà phê hảo hạng nhất </h1>
+                    <p class="mb-4 mb-md-5">Cà phê ngon cũng giống như tình bạn: đậm đà, nồng ấm và bền chặt.</p>
+                    <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Đặt hàng ngay</a> <a href="#"
+                            class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3"> Menu</a></p>
                 </div>
 
             </div>
@@ -25,12 +24,11 @@
             <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
                 <div class="col-md-8 col-sm-12 text-center ftco-animate">
-                    <span class="subheading">Welcome</span>
-                    <h1 class="mb-4">Amazing Taste &amp; Beautiful Place</h1>
-                    <p class="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the
-                        necessary regelialia.</p>
-                    <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="#"
-                            class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
+                    <span class="subheading">Chào mừng</span>
+                    <h1 class="mb-4">Hương vị tuyệt vời &amp; Chỗ ngồi lý tưởng</h1>
+                    <p class="mb-4 mb-md-5">Cà phê ngon cũng giống như tình bạn: đậm đà, nồng ấm và bền chặt.</p>
+                    <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Đặt hàng ngay</a> <a href="#"
+                            class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3"> Menu</a></p>
                 </div>
 
             </div>
@@ -43,12 +41,11 @@
             <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
                 <div class="col-md-8 col-sm-12 text-center ftco-animate">
-                    <span class="subheading">Welcome</span>
-                    <h1 class="mb-4">Creamy Hot and Ready to Serve</h1>
-                    <p class="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the
-                        necessary regelialia.</p>
-                    <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="#"
-                            class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
+                    <span class="subheading">Chào mừng</span>
+                    <h1 class="mb-4">Thơm ngon, nóng hổi và luôn sẵn sàng phục vụ</h1>
+                    <p class="mb-4 mb-md-5">Cà phê ngon cũng giống như tình bạn: đậm đà, nồng ấm và bền chặt.</p>
+                    <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Đặt hàng ngay</a> <a href="#"
+                            class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3"> Menu</a></p>
                 </div>
 
             </div>
@@ -65,7 +62,7 @@
                         <div class="icon"><span class="icon-phone"></span></div>
                         <div class="text">
                             <h3>000 (123) 456 7890</h3>
-                            <p>A small river named Duden flows by their place and supplies.</p>
+                            <p>Cà phê ngon cũng giống như tình bạn: đậm đà, nồng ấm và bền chặt.</p>
                         </div>
                     </div>
                     <div class="col-md-4 d-flex ftco-animate">
@@ -78,47 +75,46 @@
                     <div class="col-md-4 d-flex ftco-animate">
                         <div class="icon"><span class="icon-clock-o"></span></div>
                         <div class="text">
-                            <h3>Open Monday-Friday</h3>
+                            <h3>Mở cửa : Thứ 2 - Thứ 6</h3>
                             <p>8:00am - 9:00pm</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="book p-4">
-                <h3>Book a Table</h3>
-                <form action="#" class="appointment-form">
+                <h3>Đặt bàn trước</h3>
+                <form action="{{URL::to('/set-appointment')}}" class="appointment-form">
                     <div class="d-md-flex">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="First Name">
-                        </div>
-                        <div class="form-group ml-md-4">
-                            <input type="text" class="form-control" placeholder="Last Name">
+                            <input type="text" name="name" class="form-control" placeholder="Họ và Tên">
                         </div>
                     </div>
                     <div class="d-md-flex">
                         <div class="form-group">
                             <div class="input-wrap">
                                 <div class="icon"><span class="ion-md-calendar"></span></div>
-                                <input type="text" class="form-control appointment_date" placeholder="Date">
+                                <input type="text" name="date" class="form-control appointment_date"
+                                    placeholder="Ngày đặt">
                             </div>
                         </div>
                         <div class="form-group ml-md-4">
                             <div class="input-wrap">
                                 <div class="icon"><span class="ion-ios-clock"></span></div>
-                                <input type="text" class="form-control appointment_time" placeholder="Time">
+                                <input type="text" name="time" class="form-control appointment_time"
+                                    placeholder="Thời gian">
                             </div>
                         </div>
                         <div class="form-group ml-md-4">
-                            <input type="text" class="form-control" placeholder="Phone">
+                            <input type="text" name="phone" class="form-control" placeholder="SDT">
                         </div>
                     </div>
                     <div class="d-md-flex">
                         <div class="form-group">
-                            <textarea name="" id="" cols="30" rows="2" class="form-control"
-                                placeholder="Message"></textarea>
+                            <textarea name="descript" cols="30" rows="2" class="form-control"
+                                placeholder="Yêu cầu đi kèm"></textarea>
                         </div>
                         <div class="form-group ml-md-4">
-                            <input type="submit" value="Appointment" class="btn btn-white py-3 px-4">
+                            <input type="submit" value="Đặt Bàn" class="btn btn-white py-3 px-4">
                         </div>
                     </div>
                 </form>
@@ -132,7 +128,7 @@
     <div class="one-half ftco-animate">
         <div class="overlap">
             <div class="heading-section ftco-animate ">
-                <span class="subheading">Discover</span>
+                <span class="subheading">Tìm Hiểu</span>
                 <h2 class="mb-4">Our Story</h2>
             </div>
             <div>
@@ -156,7 +152,7 @@
                         <span class="flaticon-choices"></span>
                     </div>
                     <div class="media-body">
-                        <h3 class="heading">Easy to Order</h3>
+                        <h3 class="heading">Đặt hàng dễ dàng</h3>
                         <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
                             unorthographic.</p>
                     </div>
@@ -168,7 +164,7 @@
                         <span class="flaticon-delivery-truck"></span>
                     </div>
                     <div class="media-body">
-                        <h3 class="heading">Fastest Delivery</h3>
+                        <h3 class="heading">Giao hàng nhanh chóng</h3>
                         <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
                             unorthographic.</p>
                     </div>
@@ -180,7 +176,7 @@
                         <span class="flaticon-coffee-bean"></span>
                     </div>
                     <div class="media-body">
-                        <h3 class="heading">Quality Coffee</h3>
+                        <h3 class="heading">Cà phê chất lượng cao</h3>
                         <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
                             unorthographic.</p>
                     </div>
@@ -195,8 +191,8 @@
         <div class="row align-items-center">
             <div class="col-md-6 pr-md-5">
                 <div class="heading-section text-md-right ftco-animate">
-                    <span class="subheading">Discover</span>
-                    <h2 class="mb-4">Our Menu</h2>
+                    <span class="subheading">Tìm hiểu</span>
+                    <h2 class="mb-4"> Menu</h2>
                     <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and
                         Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the
                         coast of the Semantics, a large language ocean.</p>
@@ -247,7 +243,7 @@
                             <div class="text">
                                 <div class="icon"><span class="flaticon-coffee-cup"></span></div>
                                 <strong class="number" data-number="100">0</strong>
-                                <span>Coffee Branches</span>
+                                <span>Tổng chi nhánh</span>
                             </div>
                         </div>
                     </div>
@@ -256,7 +252,7 @@
                             <div class="text">
                                 <div class="icon"><span class="flaticon-coffee-cup"></span></div>
                                 <strong class="number" data-number="85">0</strong>
-                                <span>Number of Awards</span>
+                                <span>Giải thưởng đạt được</span>
                             </div>
                         </div>
                     </div>
@@ -265,7 +261,7 @@
                             <div class="text">
                                 <div class="icon"><span class="flaticon-coffee-cup"></span></div>
                                 <strong class="number" data-number="10567">0</strong>
-                                <span>Happy Customer</span>
+                                <span>Khách hàng hài lòng</span>
                             </div>
                         </div>
                     </div>
@@ -274,7 +270,7 @@
                             <div class="text">
                                 <div class="icon"><span class="flaticon-coffee-cup"></span></div>
                                 <strong class="number" data-number="900">0</strong>
-                                <span>Staff</span>
+                                <span>Nhân sự</span>
                             </div>
                         </div>
                     </div>
@@ -288,8 +284,8 @@
     <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
             <div class="col-md-7 heading-section ftco-animate text-center">
-                <span class="subheading">Discover</span>
-                <h2 class="mb-4">Best Coffee Sellers</h2>
+                <span class="subheading">Tìm hiểu</span>
+                <h2 class="mb-4">Các món bán chạy nhất</h2>
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
                     live the blind texts.</p>
             </div>
@@ -303,7 +299,7 @@
                         <h3><a href="#">Coffee Capuccino</a></h3>
                         <p>A small river named Duden flows by their place and supplies</p>
                         <p class="price"><span>$5.90</span></p>
-                        <p><a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
+                        <p><a href="#" class="btn btn-primary btn-outline-primary">Thêm vào giỏ hàng</a></p>
                     </div>
                 </div>
             </div>
@@ -315,7 +311,7 @@
                         <h3><a href="#">Coffee Capuccino</a></h3>
                         <p>A small river named Duden flows by their place and supplies</p>
                         <p class="price"><span>$5.90</span></p>
-                        <p><a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
+                        <p><a href="#" class="btn btn-primary btn-outline-primary">Thêm vào giỏ hàng</a></p>
                     </div>
                 </div>
             </div>
@@ -327,7 +323,7 @@
                         <h3><a href="#">Coffee Capuccino</a></h3>
                         <p>A small river named Duden flows by their place and supplies</p>
                         <p class="price"><span>$5.90</span></p>
-                        <p><a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
+                        <p><a href="#" class="btn btn-primary btn-outline-primary">Thêm vào giỏ hàng</a></p>
                     </div>
                 </div>
             </div>
@@ -339,7 +335,7 @@
                         <h3><a href="#">Coffee Capuccino</a></h3>
                         <p>A small river named Duden flows by their place and supplies</p>
                         <p class="price"><span>$5.90</span></p>
-                        <p><a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
+                        <p><a href="#" class="btn btn-primary btn-outline-primary">Thêm vào giỏ hàng</a></p>
                     </div>
                 </div>
             </div>
@@ -390,8 +386,8 @@
     <div class="container">
         <div class="row justify-content-center mb-5">
             <div class="col-md-7 heading-section text-center ftco-animate">
-                <span class="subheading">Discover</span>
-                <h2 class="mb-4">Our Products</h2>
+                <span class="subheading">Tìm hiểu</span>
+                <h2 class="mb-4">Những thành phẩm của chúng tôi</h2>
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
                     live the blind texts.</p>
             </div>
@@ -428,8 +424,9 @@
                                                 <p>Far far away, behind the word mountains, far from the countries
                                                     Vokalia and Consonantia.</p>
                                                 <p class="price"><span>$2.90</span></p>
-                                                <p><a href="#" class="btn btn-primary btn-outline-primary">Add to
-                                                        cart</a></p>
+                                                <p><a href="#" class="btn btn-primary btn-outline-primary">Thêm vào giỏ
+                                                        hàng
+                                                    </a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -442,8 +439,9 @@
                                                 <p>Far far away, behind the word mountains, far from the countries
                                                     Vokalia and Consonantia.</p>
                                                 <p class="price"><span>$2.90</span></p>
-                                                <p><a href="#" class="btn btn-primary btn-outline-primary">Add to
-                                                        cart</a></p>
+                                                <p><a href="#" class="btn btn-primary btn-outline-primary">Thêm vào giỏ
+                                                        hàng
+                                                    </a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -456,8 +454,9 @@
                                                 <p>Far far away, behind the word mountains, far from the countries
                                                     Vokalia and Consonantia.</p>
                                                 <p class="price"><span>$2.90</span></p>
-                                                <p><a href="#" class="btn btn-primary btn-outline-primary">Add to
-                                                        cart</a></p>
+                                                <p><a href="#" class="btn btn-primary btn-outline-primary">Thêm vào giỏ
+                                                        hàng
+                                                    </a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -475,8 +474,9 @@
                                                 <p>Far far away, behind the word mountains, far from the countries
                                                     Vokalia and Consonantia.</p>
                                                 <p class="price"><span>$2.90</span></p>
-                                                <p><a href="#" class="btn btn-primary btn-outline-primary">Add to
-                                                        cart</a></p>
+                                                <p><a href="#" class="btn btn-primary btn-outline-primary">Thêm vào giỏ
+                                                        hàng
+                                                    </a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -489,8 +489,9 @@
                                                 <p>Far far away, behind the word mountains, far from the countries
                                                     Vokalia and Consonantia.</p>
                                                 <p class="price"><span>$2.90</span></p>
-                                                <p><a href="#" class="btn btn-primary btn-outline-primary">Add to
-                                                        cart</a></p>
+                                                <p><a href="#" class="btn btn-primary btn-outline-primary">Thêm vào giỏ
+                                                        hàng
+                                                    </a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -661,6 +662,7 @@
         </div>
     </div>
 </section>
+<<<<<<< HEAD
 
 <section class="ftco-section">
     <div class="container">
@@ -728,53 +730,21 @@
 </section>
 
 
+=======
+<br>
+<br>
+>>>>>>> a50a90f005b3a1988abdb2ee3a64f3e655c21b1e
 <section class="ftco-appointment">
     <div class="overlay"></div>
     <div class="container-wrap">
         <div class="row no-gutters d-md-flex align-items-center">
-            <div class="col-md-6 d-flex align-self-stretch">
+            <div class="col-md-12 d-flex align-self-stretch">
                 <div id="map"></div>
-            </div>
-            <div class="col-md-6 appointment ftco-animate">
-                <h3 class="mb-3">Book a Table</h3>
-                <form action="#" class="appointment-form">
-                    <div class="d-md-flex">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="First Name">
-                        </div>
-                        <div class="form-group ml-md-4">
-                            <input type="text" class="form-control" placeholder="Last Name">
-                        </div>
-                    </div>
-                    <div class="d-md-flex">
-                        <div class="form-group">
-                            <div class="input-wrap">
-                                <div class="icon"><span class="ion-md-calendar"></span></div>
-                                <input type="text" class="form-control appointment_date" placeholder="Date">
-                            </div>
-                        </div>
-                        <div class="form-group ml-md-4">
-                            <div class="input-wrap">
-                                <div class="icon"><span class="ion-ios-clock"></span></div>
-                                <input type="text" class="form-control appointment_time" placeholder="Time">
-                            </div>
-                        </div>
-                        <div class="form-group ml-md-4">
-                            <input type="text" class="form-control" placeholder="Phone">
-                        </div>
-                    </div>
-                    <div class="d-md-flex">
-                        <div class="form-group">
-                            <textarea name="" id="" cols="30" rows="2" class="form-control"
-                                placeholder="Message"></textarea>
-                        </div>
-                        <div class="form-group ml-md-4">
-                            <input type="submit" value="Appointment" class="btn btn-primary py-3 px-4">
-                        </div>
-                    </div>
-                </form>
             </div>
         </div>
     </div>
 </section>
+<script>
+
+</script>
 @endsection
