@@ -10,24 +10,24 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{asset('frontend/css/open-iconic-bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/animate.css')}}">
+    <link rel="stylesheet" href="{{asset('public/frontend/css/open-iconic-bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('public/frontend/css/animate.css')}}">
 
-    <link rel="stylesheet" href="{{asset('frontend/css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/owl.theme.default.min.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{asset('public/frontend/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('public/frontend/css/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" href="{{asset('public/frontend/css/magnific-popup.css')}}">
 
-    <link rel="stylesheet" href="{{asset('frontend/css/aos.css')}}">
+    <link rel="stylesheet" href="{{asset('public/frontend/css/aos.css')}}">
 
-    <link rel="stylesheet" href="{{asset('frontend/css/ionicons.min.css')}}">
+    <link rel="stylesheet" href="{{asset('public/frontend/css/ionicons.min.css')}}">
 
-    <link rel="stylesheet" href="{{asset('frontend/css/bootstrap-datepicker.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/jquery.timepicker.css')}}">
+    <link rel="stylesheet" href="{{asset('public/frontend/css/bootstrap-datepicker.css')}}">
+    <link rel="stylesheet" href="{{asset('public/frontend/css/jquery.timepicker.css')}}">
 
 
-    <link rel="stylesheet" href="{{asset('frontend/css/flaticon.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/icomoon.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('public/frontend/css/flaticon.css')}}">
+    <link rel="stylesheet" href="{{asset('public/frontend/css/icomoon.css')}}">
+    <link rel="stylesheet" href="{{asset('public/frontend/css/style.css')}}">
 </head>
 
 <body>
@@ -40,8 +40,8 @@
             </button>
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a href="{{URL::to('/home')}}" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="{{ ('/Menu') }}" class="nav-link">Menu</a></li>
+                    <li class="nav-item active"><a href="{{URL::to('/')}}" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="{{url::to('/Menu')}}" class="nav-link">Menu</a></li>
                     <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
                     <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
                     <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
@@ -89,7 +89,7 @@
                         <h2 class="ftco-heading-2">Recent Blog</h2>
                         <div class="block-21 mb-4 d-flex">
                             <a class="blog-img mr-4"
-                                style="background-image: url({{asset('frontend/images/image_1.jpg')}});"></a>
+                                style="background-image: url({{asset('public/frontend/images/image_1.jpg')}});"></a>
                             <div class="text">
                                 <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a>
                                 </h3>
@@ -102,7 +102,7 @@
                         </div>
                         <div class="block-21 mb-4 d-flex">
                             <a class="blog-img mr-4"
-                                style="background-image: url({{asset('frontend/images/image_2.jpg')}});"></a>
+                                style="background-image: url({{asset('public/frontend/images/image_2.jpg')}});"></a>
                             <div class="text">
                                 <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a>
                                 </h3>
@@ -155,24 +155,24 @@
         </svg></div>
 
 
-    <script src="{{asset('frontend/js/jquery.min.js')}}"></script>
-    <script src="{{asset('frontend/js/jquery-migrate-3.0.1.min.js')}}"></script>
-    <script src="{{asset('frontend/js/popper.min.js')}}"></script>
-    <script src="{{asset('frontend/js/bootstrap.min.')}}"></script>
-    <script src="{{asset('frontend/js/jquery.easing.1.3.js')}}"></script>
-    <script src="{{asset('frontend/js/jquery.waypoints.min.js')}}"></script>
-    <script src="{{asset('frontend/js/jquery.stellar.min.js')}}"></script>
-    <script src="{{asset('frontend/js/owl.carousel.min.js')}}"></script>
-    <script src="{{asset('frontend/js/jquery.magnific-popup.min.js')}}"></script>
-    <script src="{{asset('frontend/js/aos.js')}}"></script>
-    <script src="{{asset('frontend/js/jquery.animateNumber.min.js')}}"></script>
-    <script src="{{asset('frontend/js/bootstrap-datepicker.js')}}"></script>
-    <script src="{{asset('frontend/js/jquery.timepicker.min.js')}}"></script>
-    <script src="{{asset('frontend/js/scrollax.min.js')}}"></script>
+    <script src="{{asset('public/frontend/js/jquery.min.js')}}"></script>
+    <script src="{{asset('public/frontend/js/jquery-migrate-3.0.1.min.js')}}"></script>
+    <script src="{{asset('public/frontend/js/popper.min.js')}}"></script>
+    <script src="{{asset('public/frontend/js/bootstrap.min.')}}"></script>
+    <script src="{{asset('public/frontend/js/jquery.easing.1.3.js')}}"></script>
+    <script src="{{asset('public/frontend/js/jquery.waypoints.min.js')}}"></script>
+    <script src="{{asset('public/frontend/js/jquery.stellar.min.js')}}"></script>
+    <script src="{{asset('public/frontend/js/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('public/frontend/js/jquery.magnific-popup.min.js')}}"></script>
+    <script src="{{asset('public/frontend/js/aos.js')}}"></script>
+    <script src="{{asset('public/frontend/js/jquery.animateNumber.min.js')}}"></script>
+    <script src="{{asset('public/frontend/js/bootstrap-datepicker.js')}}"></script>
+    <script src="{{asset('public/frontend/js/jquery.timepicker.min.js')}}"></script>
+    <script src="{{asset('public/frontend/js/scrollax.min.js')}}"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false">
     </script>
-    <script src="{{asset('frontend/js/google-map.js')}}"></script>
-    <script src="{{asset('frontend/js/main.js')}}"></script>
+    <script src="{{asset('public/frontend/js/google-map.js')}}"></script>
+    <script src="{{asset('public/frontend/js/main.js')}}"></script>
 
 </body>
 

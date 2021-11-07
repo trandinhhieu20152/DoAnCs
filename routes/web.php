@@ -16,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 
 /* Front-end */
 Route::get('','HomeController@index');
+
+//Menu
+Route::get('/Menu', 'HomeController@menu');
+
 //view contact
 Route::get('/contact','Contact@index');
 
@@ -98,11 +102,8 @@ Route::prefix('Product')->group(function(){
         'uses'=> "ProductController@delete",
     ]);
 });
-<<<<<<< HEAD
 
 
 // giao dien nguoi dung
-Route::get('/Menu', 'HomeController@menu');
-=======
+
 /*End Back-end */
->>>>>>> a50a90f005b3a1988abdb2ee3a64f3e655c21b1e
