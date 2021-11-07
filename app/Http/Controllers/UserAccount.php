@@ -53,10 +53,4 @@ class UserAccount extends Controller
         $data->delete();
         return redirect('/user-account');
     }
-    // public function update_account(){
-    //     $edit_category_products = DB::table('tbl_category_product')->where('category_id',$category_product_id)->get();
-    //     $manager_category_product = view('admin.all_category_product')->with('edit_category_product',$edit_category_products);
-    //     return view('admin_layout')->with('admin.all_category_product',$manager_category_product);
-    // }
-
 }

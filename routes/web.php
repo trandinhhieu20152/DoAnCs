@@ -15,7 +15,18 @@ use Illuminate\Support\Facades\Route;
 
 
 /* Front-end */
-Route::get('/home','HomeController@index');
+Route::get('','HomeController@index');
+//view contact
+Route::get('/contact','Contact@index');
+
+Route::post('/send-contact','Contact@send_contact');
+// appointment
+Route::get('/get-appointment', 'Appointment@get_appointment');
+Route::get('/set-appointment', 'Appointment@set_appointment');
+
+Route::post('/confirm-appointment', 'Appointment@confirm_appointment');
+Route::get('/success-appointment', 'Appointment@success_appointment');
+/* end Front-end */
 
 /* Back-end */
 Route::get('/admin','AdminController@index');
@@ -39,6 +50,15 @@ Route::get('/delete-user/{userid}','UserAccount@delete_account');
 
 Route::post('/save-account','UserAccount@save_account');
 Route::post('/update-account','UserAccount@save_update_account');
+
+//Admin table 
+Route::get('/admin-table','AdminTable@index');
+Route::get('/delete-table/{userid}','AdminTable@delete_table');
+Route::get('/search-table','AdminTable@search_table');
+
+// Admin contact
+Route::get('/admin-contact','AdminContact@index');
+Route::get('/eye-contact/{userid}','AdminContact@eye_contact');
 
 
 // Category products
@@ -78,3 +98,4 @@ Route::prefix('Product')->group(function(){
         'uses'=> "ProductController@delete",
     ]);
 });
+/*End Back-end */
