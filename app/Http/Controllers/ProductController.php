@@ -34,7 +34,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $result= $this->category->get();
+        $result= $this->category::all();
         return view('admin.add_product')->with("all_category", $result);
     }
 

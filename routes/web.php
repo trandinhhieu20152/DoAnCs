@@ -18,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('','HomeController@index');
 //view contact
 Route::get('/contact','Contact@index');
+// product detail
+Route::get('/Product-detail/{id}','HomeController@product_detail');
 
 Route::post('/send-contact','Contact@send_contact');
 // appointment
@@ -98,11 +100,9 @@ Route::prefix('Product')->group(function(){
         'uses'=> "ProductController@delete",
     ]);
 });
-<<<<<<< HEAD
 
 
 // giao dien nguoi dung
+
 Route::get('/Menu', 'HomeController@menu');
-=======
 /*End Back-end */
->>>>>>> a50a90f005b3a1988abdb2ee3a64f3e655c21b1e
