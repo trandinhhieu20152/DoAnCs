@@ -15,14 +15,16 @@
             <div class="form-group row">
                 <label class="control-label col-sm-2" for="input-1">Tên Sản phẩm</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="input-1" name="product_name" placeholder="Tên Sản phẩm" />
+                    <input type="text" class="form-control" id="input-1" name="product_name"
+                        placeholder="Tên Sản phẩm" />
                 </div>
             </div>
-            
+
             <div class="form-group row">
                 <label class="control-label col-sm-2" for="input-4">Giá sản phẩm</label>
                 <div class="col-sm-10">
-                    <input type="number" id="input-4" name="product_price" class="form-control" placeholder="Giá sản phẩm" />
+                    <input type="number" id="input-4" name="product_price" class="form-control"
+                        placeholder="Giá sản phẩm" />
                 </div>
             </div>
             <div class="form-group row">
@@ -44,7 +46,8 @@
             <div class="form-group row">
                 <label class="control-label col-sm-2" for="input-11">Mô tả chi tiết</label>
                 <div class="col-sm-10">
-                    <textarea rows="5" class="form-control" id="input-11" name="product_des" placeholder="Mô tả chi tiết"></textarea>
+                    <textarea rows="5" class="form-control" id="input-11" name="product_des"
+                        placeholder="Mô tả chi tiết"></textarea>
                 </div>
             </div>
             <div class="form-group">

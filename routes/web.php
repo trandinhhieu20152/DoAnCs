@@ -16,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 
 /* Front-end */
 Route::get('','HomeController@index');
+
+//Menu
+Route::get('/Menu', 'HomeController@menu');
+
 //view contact
 Route::get('/contact','Contact@index');
 // product detail
@@ -104,5 +108,4 @@ Route::prefix('Product')->group(function(){
 
 // giao dien nguoi dung
 
-Route::get('/Menu', 'HomeController@menu');
 /*End Back-end */
