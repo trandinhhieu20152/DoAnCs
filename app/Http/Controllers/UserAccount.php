@@ -6,14 +6,25 @@ use App\User;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class UserAccount extends Controller
 {
+    public function AuthLogin(){
+        $admin_id = Session::get('id');
+        if($admin_id){
+            return redirect('/dashboard');
+        }else{
+            return redirect('/admin')->send();
+        }
+    }
     public function all_user(){
+        $this->AuthLogin();
         $data=User::paginate(6);
         return view('admin.user_account',['data'=>$data]);
     }
     public function add_account(){
+        $this->AuthLogin();
         return view('admin.add_account');
     }
     public function save_account(Request $request){
@@ -37,6 +48,7 @@ class UserAccount extends Controller
         }
     }
     public function update_account($userid){
+        $this->AuthLogin();
        $data_user= User::find($userid);
        return view('admin.update_account',['data'=>$data_user]);
     }
@@ -48,8 +60,9 @@ class UserAccount extends Controller
         $data->save();
         return redirect('/user-account');
     }
-    public function delete_account($userid){
-        $data= User::find($userid);
+    public function delete_account($category_product_id){
+        $this->AuthLogin();
+        $data= User::find($category_product_id);
         $data->delete();
         return redirect('/user-account');
     }

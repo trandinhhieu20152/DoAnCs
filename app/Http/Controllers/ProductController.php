@@ -51,8 +51,8 @@ class ProductController extends Controller
         // dd($get_image);
         if($get_image){
             $name_image = $get_image->getClientOriginalName();
-            $new_image= $name_image.rand(0,99).'.'.$get_image->getClientOriginalExtension();
-            $get_image->move('uploads/products',$new_image);
+            $new_image= $name_image .'.'.$get_image->getClientOriginalExtension();
+            $get_image->move('public/uploads/products',$new_image);
             $data['product_image']= $new_image;
             $this->product->insert($data);
             Session::put('message','Success');

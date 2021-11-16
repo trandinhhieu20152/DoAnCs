@@ -246,7 +246,7 @@
                                                 class="fa fa-angle-right mr-2"></i>Quản lý danh mục sản phẩm</a></li>
                                     <li class="child"><a href="{{route('Product.index')}}" class="ml-4"><i
                                                 class="fa fa-angle-right mr-2"></i> Quản lí sản phẩm</a></li>
-                                    <li class="child"><a href="ckeditor-document.html" class="ml-4"><i
+                                    <li class="child"><a href="{{url('/view-post')}}" class="ml-4"><i
                                                 class="fa fa-angle-right mr-2"></i> Quản lí bài viết</a></li>
                                 </ul>
                             </li>

@@ -18,7 +18,7 @@
                 <table class="table table-bordered table-striped mt-0" id="datatable">
                     <thead>
                         <tr>
-                            
+
                             <th>STT</th>
                             <th>Tên Sản Phẩm</th>
                             <th>Ảnh Sản Phẩm</th>
@@ -37,16 +37,17 @@
                         
                     ?>
                     <tbody>
-                       
+
                         @foreach($all_product as $item_pro)
                         <tr>
-                            
+
                             <td style="font-size: 18px;" class="align-middle">{{$item_pro ->product_id}}</td>
                             <td style="font-size: 18px;" class="align-middle">
                                 {{$item_pro ->product_name}}
                             </td>
                             <td style="font-size: 18px;" class="align-middle">
-                                <img src="uploads/products/{{$item_pro ->product_image}}" width="100px" height="100px" style="overflow: hidden;">
+                                <img src="public/uploads/products/{{$item_pro ->product_image}}" width="100px"
+                                    height="100px" style="overflow: hidden;">
                             </td>
                             <td style="font-size: 18px;" class="align-middle">
                                 {{$item_pro ->product_price}}
@@ -54,9 +55,10 @@
                             <td style="font-size: 18px;" class="align-middle">
                                 {{$item_pro ->category_name}}
                             </td>
-                            
+
                             <td class="align-middle text-center">
-                                <a href="{{ route('Product.edit',['id'=>$item_pro->product_id]) }}" class="btn btn-success edit">
+                                <a href="{{ route('Product.edit',['id'=>$item_pro->product_id]) }}"
+                                    class="btn btn-success edit">
                                     <i class="fa fa-pencil"></i></a>
                                 <a onclick="return confirm('Bạn có chắc muốn xóa {{$item_pro->product_name}}?')"
                                     href="{{route('Product.delete',['id'=>$item_pro->product_id])}}"
@@ -64,19 +66,19 @@
                             </td>
                         </tr>
                         @endforeach
-                    </table>
-                        
-                        <div class="text-right">
-                            <a href="{{ route('Product.create') }}" class="btn btn-outline-theme"><i
-                                class="fa fa-plus"></i> Thêm sản phẩm</a>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    
+                </table>
+
+                <div class="text-right">
+                    <a href="{{ route('Product.create') }}" class="btn btn-outline-theme"><i class="fa fa-plus"></i>
+                        Thêm sản phẩm</a>
                 </div>
+
             </div>
-            
+        </div>
+
+    </div>
+</div>
+
 <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
 <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 
@@ -95,6 +97,6 @@ $(document).on('click', '.edit', function() {
 <script src="backend/assets/js/custom.js"></script>
 <!--Custom Js Script-->
 <script>
-    $('#example').DataTable();
+$('#example').DataTable();
 </script>
 @endsection

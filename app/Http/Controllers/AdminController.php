@@ -18,7 +18,16 @@ class AdminController extends Controller
     public function index(){
         return view('login.login');
     }
+    public function AuthLogin(){
+        $admin_id = Session::get('id');
+        if($admin_id){
+            return redirect('/dashboard');
+        }else{
+            return redirect('/admin')->send();
+        }
+    }
     public function show_dashboard(){
+        $this->AuthLogin();
         return view('admin.dashboard');
     }
     public function admin_index(){
@@ -43,7 +52,7 @@ class AdminController extends Controller
                     Session::put('id',$request->id);
                     return Redirect::to('/dashboard');
                 }else{
-                    return  redirect('/home');
+                    return  redirect('/');
                 }
             }else{
                 Session::put('message','Tài khoản hoặc mật khẩu của bạn không nhập đúng !!');
@@ -52,6 +61,7 @@ class AdminController extends Controller
         }
     }
     public function admin_register(Request $request){
+        $this->AuthLogin();
        $name= $request->input('name');
        $email= $request->input('email');
        $password= $request->input('password');
@@ -89,6 +99,7 @@ class AdminController extends Controller
     }
 
     public function log_out(){
+        $this->AuthLogin();
         Session::put('name',null);
         Session::put('id',null);
         return Redirect::to('/admin');

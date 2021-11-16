@@ -9,6 +9,14 @@ session_start();
 
 class Appointment extends Controller
 {
+    public function AuthLogin(){
+        $admin_id = Session::get('id');
+        if($admin_id){
+            return redirect('/dashboard');
+        }else{
+            return redirect('/admin')->send();
+        }
+    }
     function set_appointment(Request $request){
        Session::flash('name',$request->name);
        Session::flash('date',$request->date);

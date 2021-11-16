@@ -22,16 +22,19 @@ Route::get('/Menu', 'HomeController@menu');
 
 //view contact
 Route::get('/contact','Contact@index');
+
+Route::post('/send-contact','Contact@send_contact');
 // product detail
 Route::get('/Product-detail/{id}','HomeController@product_detail');
 
-Route::post('/send-contact','Contact@send_contact');
+
 // appointment
 Route::get('/get-appointment', 'Appointment@get_appointment');
 Route::get('/set-appointment', 'Appointment@set_appointment');
+Route::get('/success-appointment', 'Appointment@success_appointment');
 
 Route::post('/confirm-appointment', 'Appointment@confirm_appointment');
-Route::get('/success-appointment', 'Appointment@success_appointment');
+
 /* end Front-end */
 
 /* Back-end */
@@ -56,7 +59,9 @@ Route::get('/delete-user/{userid}','UserAccount@delete_account');
 
 Route::post('/save-account','UserAccount@save_account');
 Route::post('/update-account','UserAccount@save_update_account');
-
+// Admin Post
+Route::get('/view-post', 'Post@view');
+Route::post('/update-post', 'Post@post');
 //Admin table 
 Route::get('/admin-table','AdminTable@index');
 Route::get('/delete-table/{userid}','AdminTable@delete_table');
@@ -71,9 +76,10 @@ Route::get('/eye-contact/{userid}','AdminContact@eye_contact');
 Route::get('/all-category-products','CategoryProduct@all_category_products');
 Route::get('/add-category-products','CategoryProduct@add_category_products');
 Route::get('/delete-category-product/{category_product_id}','CategoryProduct@delete_category_products');
+Route::get('/update-category-product/{category_product_id}','CategoryProduct@update_category_products');
 
 Route::post('/save-category-product','CategoryProduct@save_category_products');
-Route::post('/update-category-product/{category_product_id}','CategoryProduct@update_category_products');
+// Route::post('/update-category-product/{category_product_id}','CategoryProduct@update_category_products');
 
 
 //product backend

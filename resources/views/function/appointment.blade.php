@@ -1,5 +1,5 @@
-@extends('layout')
-@section('layout_content')
+@extends('layout.layout_of_pages')
+@section('content')
 <section class="ftco-section">
     <div class="container">
         <div class="row">

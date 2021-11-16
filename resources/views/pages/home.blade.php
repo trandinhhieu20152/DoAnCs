@@ -1,5 +1,5 @@
-@extends('layout')
-@section('layout_content')
+@extends('layout.layout_of_pages')
+@section('content')
 <section class="home-slider owl-carousel">
     <div class="slider-item" style="background-image: url({{asset('public/frontend/images/bg_1.jpg')}});">
         <div class="overlay"></div>
@@ -16,7 +16,6 @@
             </div>
         </div>
     </div>
-
     <div class="slider-item" style="background-image: url({{asset('public/frontend/images/bg_2.jpg')}});">
         <div class="overlay"></div>
         <div class="container">
@@ -131,12 +130,7 @@
                 <h2 class="mb-4">Our Story</h2>
             </div>
             <div>
-                <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it
-                    would have been rewritten a thousand times and everything that was left from its origin would be
-                    the word "and" and the Little Blind Text should turn around and return to its own, safe country.
-                    But nothing the copy said could convince her and so it didn’t take long until a few insidious
-                    Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their
-                    agency, where they abused her for their.</p>
+                <p>{{$data->content}}</p>
             </div>
         </div>
     </div>
